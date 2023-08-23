@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+
+
+  <ItemGroup>
+    <PackageReference Include="CompanyName.Core" Version="1.0.0" />
+    <PackageReference Include="FluentValidation" Version="11.7.1" />
+  </ItemGroup>
+
+	
+	<ItemGroup>
+		<Using Include="OneOf" />
+		<Using Include="OneOf.Types" />
+	</ItemGroup>
+
+</Project>

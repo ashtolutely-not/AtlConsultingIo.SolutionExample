@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!--<LangVersion>11.0</LangVersion>-->
+    <Version>1.1.8</Version>
+    <RepositoryType>github</RepositoryType>
+    <RepositoryUrl>https://github.com/ashtolutely-not/AtlConsultingIo.IntegrationOperations</RepositoryUrl>
+    <UserSecretsId>2dcaae20-2f6f-4da6-9858-8aa1362c31ec</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="AtlConsultingIo.IntegrationOperations.Tests" />
+    <InternalsVisibleTo Include="AtlConsultingIo.IntegrationOperations.TestConsole" />
+  </ItemGroup>
+  <ItemGroup Label="Nuget dependencies">
+    <PackageReference Include="Azure.Data.Tables" Version="12.8.1" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.17.0" />
+    <PackageReference Include="Azure.Storage.Common" Version="12.16.0" />
+    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.15.0" />
+    <PackageReference Include="Azure.Storage.Queues" Version="12.15.0" />
+    <PackageReference Include="Dapper" Version="2.0.143" />
+    <PackageReference Include="Dapper.Contrib" Version="2.0.78" />
+    <PackageReference Include="FluentValidation" Version="11.7.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.7.1" />
+    <PackageReference Include="Flurl" Version="3.0.7" />
+    <PackageReference Include="LazyCache.AspNetCore" Version="2.4.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.WorkerService" Version="2.21.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Azure" Version="1.7.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.AzureAppConfiguration" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="7.0.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="OneOf" Version="3.0.255" />
+    <PackageReference Include="Pluralize.NET.Core" Version="1.0.0" />
+    <PackageReference Include="Polly.Contrib.WaitAndRetry" Version="1.1.1" />
+    <PackageReference Include="System.Linq.Async" Version="6.0.1" />
+  </ItemGroup>
+  <ItemGroup Label="Global Usings">
+    <Using Include="Newtonsoft.Json" />
+    <Using Include="Newtonsoft.Json.Linq" />
+    <Using Include="Newtonsoft.Json.Serialization" />
+    <Using Include="Newtonsoft.Json.Converters" />
+    <Using Include="Flurl" />
+    <Using Include="System" />
+    <Using Include="System.Collections.Generic" />
+    <Using Include="System.Linq" />
+    <Using Include="System.Text" />
+    <Using Include="System.Threading.Tasks" />
+    <Using Include="LazyCache" />
+  </ItemGroup>
+</Project>

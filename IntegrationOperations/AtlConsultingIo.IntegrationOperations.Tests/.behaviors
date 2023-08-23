@@ -1,0 +1,16 @@
+Behaviors To Test:
+
+-- Behaviors execute dynamically when expected
+-- Closed request handlers execute when expected
+-- Event counters update as expected
+-- Operations handler retry executes as expected
+-- HttpSendContext can be resolved
+
+
+To Do:
+-- Extract interfaces from Operation services
+-- Define mock services
+-- Define behaviors to test against mocks
+
+Integration Tests
+-- Changes to underlying configuration in AzureAppConfiguration service are reflected in snapshot

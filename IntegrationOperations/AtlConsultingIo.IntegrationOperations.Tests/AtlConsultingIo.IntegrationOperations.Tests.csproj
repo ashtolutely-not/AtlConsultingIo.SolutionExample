@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<IsPackable>false</IsPackable>
+		<IsTestProject>true</IsTestProject>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Settings\appsettings.nested.json" />
+	  <None Remove="Settings\appsettings.single.integration.json" />
+	  <None Remove="Settings\appsettings.test.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Settings\appsettings.single.integration.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Settings\appsettings.nested.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Settings\appsettings.test.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoFixture" Version="4.18.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.3" />
+		<PackageReference Include="Moq" Version="4.18.4" />
+		<PackageReference Include="Shouldly" Version="4.2.1" />
+		<PackageReference Include="xunit" Version="2.5.0" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.5.0">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="coverlet.collector" Version="6.0.0">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="6.0.19" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\AtlConsultingIo.IntegrationOperations.TestConsole\AtlConsultingIo.IntegrationOperations.TestConsole.csproj" />
+	</ItemGroup>
+
+
+
+</Project>

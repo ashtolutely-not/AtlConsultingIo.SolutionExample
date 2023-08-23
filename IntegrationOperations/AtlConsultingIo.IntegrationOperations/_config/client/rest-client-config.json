@@ -1,0 +1,29 @@
+{
+  "BaseUrl": {
+    "Value": ""
+  },
+  "UserAgent": "{userAgent}",
+  "CustomHeadersRequired": false,
+  "OAuthCredentials": {
+    "TokenEndpoint": {
+      "Value": "{endpoint}"
+    },
+    "ClientId": "{clientId}",
+    "ClientSecret": "{clientSecret}"
+  },
+  "ApiUser": {
+    "Username": "{username}",
+    "Password" :  "{password}"
+  },
+  "ApiKey": {
+    "UseAuthenticationHeader": true,
+    "AuthenticationScheme": "{scheme}",
+    "UseQueryParam": false,
+    "CustomHeaderName": "{customHeaderName}",
+    "QueryParamName": "{queryParamName}",
+    "ApiKey": "{key}"
+  },
+  "CustomHeaders": {
+    "key" : "{value}"
+  }
+}

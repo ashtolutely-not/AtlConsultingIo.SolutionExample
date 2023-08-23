@@ -1,0 +1,15 @@
+{
+  "Value": {
+    "StorageLoggingConfiguration": {
+      "Enabled": true,
+      "Value": {
+
+      }
+    },
+    "IntegrationConfigurations": [
+      {},
+      {},
+      {}
+    ]
+  }
+}

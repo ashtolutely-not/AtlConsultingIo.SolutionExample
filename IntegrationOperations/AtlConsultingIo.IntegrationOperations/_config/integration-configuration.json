@@ -1,0 +1,43 @@
+{
+  "Enabled" :  true,
+  "Value": {
+    "Type": "{integrationTypeEnumString}",
+    "Name": {
+      "Value": "{optionName}"
+    },
+    "RetryOption": {
+      "Enabled": false,
+      "Value": {
+        "RetryDelayStrategy": "{strategyEnumString}",
+        "MaxRetryAttempts": 0,
+        "InitialDelayMs": 0,
+        "MinDelayMs": 0,
+        "MaxDelayMs": 0,
+        "ConstantDelayMs": 0,
+        "MedianDelayMs": 0
+      }
+    },
+    "LogOption": {
+      "Value": {
+        "RetryEventsEnabled": false,
+        "ExceptionEventsEnabled": false,
+        "ValidationEventsEnabled": false,
+        "ExceptionLogLevel": "{logLevelEnumString}",
+        "StorageLogTypes": [
+          "TransactionFailure",
+          "CommandFailure",
+          "",
+          ""
+        ]
+      }
+    },
+    "ClientConfiguration": {
+      "key1": "value1",
+      "key2" :  "value2"
+    }
+  }
+}
+
+
+//The configuration property is a dictionary so all key value pairs will bind
+//But the bound values are then converted to a typed client configuration
