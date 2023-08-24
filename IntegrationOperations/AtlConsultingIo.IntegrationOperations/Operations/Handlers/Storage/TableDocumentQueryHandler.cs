@@ -1,5 +1,6 @@
 using Azure;
 using Azure.Data.Tables;
+
 using FluentValidation;
 
 using Microsoft.Extensions.Logging;

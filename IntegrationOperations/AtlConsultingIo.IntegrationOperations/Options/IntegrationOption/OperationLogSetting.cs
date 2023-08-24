@@ -3,8 +3,6 @@
 
 using Microsoft.Extensions.Logging;
 
-using System.Reflection.Emit;
-
 namespace AtlConsultingIo.IntegrationOperations;
 
 public record OperationLogSetting

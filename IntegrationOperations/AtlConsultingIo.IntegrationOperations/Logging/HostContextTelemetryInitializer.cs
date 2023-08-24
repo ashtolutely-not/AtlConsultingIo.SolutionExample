@@ -1,6 +1,6 @@
-using Microsoft.Extensions.Options;
-using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.ApplicationInsights.Channel;
+using Microsoft.ApplicationInsights.Extensibility;
+using Microsoft.Extensions.Options;
 
 namespace AtlConsultingIo.IntegrationOperations;
 public class HostContextTelemetryInitializer : ITelemetryInitializer

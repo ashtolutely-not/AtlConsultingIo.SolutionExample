@@ -1,5 +1,4 @@
 using Microsoft.ApplicationInsights.DataContracts;
-using Microsoft.ApplicationInsights.Extensibility.Implementation;
 
 namespace AtlConsultingIo.IntegrationOperations;
 

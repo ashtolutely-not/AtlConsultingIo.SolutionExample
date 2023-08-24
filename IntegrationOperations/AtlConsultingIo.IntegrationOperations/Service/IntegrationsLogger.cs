@@ -1,3 +1,6 @@
+using System.Collections.Concurrent;
+using System.Reflection;
+
 using Azure.Data.Tables;
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
@@ -6,9 +9,6 @@ using Microsoft.ApplicationInsights;
 using Microsoft.ApplicationInsights.Metrics;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-
-using System.Collections.Concurrent;
-using System.Reflection;
 
 namespace AtlConsultingIo.IntegrationOperations;
 public sealed class IntegrationsLogger : IIntegrationsLogger

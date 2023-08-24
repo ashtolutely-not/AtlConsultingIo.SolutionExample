@@ -1,8 +1,8 @@
 
-using Azure.Data.Tables;
-
 using System.Collections.Concurrent;
 using System.Reflection;
+
+using Azure.Data.Tables;
 
 namespace AtlConsultingIo.IntegrationOperations;
 

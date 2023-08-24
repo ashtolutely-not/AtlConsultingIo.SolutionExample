@@ -1,21 +1,15 @@
 #region Usings
 
+using Azure.Identity;
+
 using FluentValidation;
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.AzureAppConfiguration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using Azure.Identity;
-using Microsoft.Extensions.Logging;
-
-using System.Reflection;
 using Microsoft.Extensions.Options;
-
-using Microsoft.Extensions.Configuration.AzureAppConfiguration;
-using Microsoft.ApplicationInsights.Extensibility;
-using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.DataProtection.KeyManagement;
 #endregion
 
 namespace AtlConsultingIo.IntegrationOperations;

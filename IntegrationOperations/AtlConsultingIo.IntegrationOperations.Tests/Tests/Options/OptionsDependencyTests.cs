@@ -1,7 +1,6 @@
 ﻿
 
 using Microsoft.Extensions.Options;
-using AtlConsultingIo.IntegrationOperations;
 namespace AtlConsultingIo.Operations.Tests;
 
 public class OptionsDependencyTests 

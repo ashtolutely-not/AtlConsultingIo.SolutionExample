@@ -1,5 +1,5 @@
 {
   "ServiceConnectionString": {
-    "Value": ""
+    "Value": "{MyConnectionString}"
   }
 }

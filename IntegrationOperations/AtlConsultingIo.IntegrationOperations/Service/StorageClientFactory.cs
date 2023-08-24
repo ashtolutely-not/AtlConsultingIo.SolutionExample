@@ -1,7 +1,8 @@
-using Azure.Storage.Blobs;
-using Azure.Data.Tables;
-using Azure.Storage.Queues;
 using System.Collections.Concurrent;
+
+using Azure.Data.Tables;
+using Azure.Storage.Blobs;
+using Azure.Storage.Queues;
 
 namespace AtlConsultingIo.IntegrationOperations;
 

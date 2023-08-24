@@ -1,0 +1,8 @@
+{
+  "SqlConnectionString": {
+    "Value": ""
+  },
+  "RowQueryTimeout": 0,
+  "SearchQueryTimeout": 0,
+  "CommandTimeout" :  0
+}

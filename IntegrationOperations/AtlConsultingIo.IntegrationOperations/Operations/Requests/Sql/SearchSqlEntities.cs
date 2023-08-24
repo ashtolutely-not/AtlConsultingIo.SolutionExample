@@ -1,8 +1,6 @@
-using Dapper;
-
-using Microsoft.Data.SqlClient;
-
 using System.Data;
+
+using Dapper;
 
 namespace AtlConsultingIo.IntegrationOperations;
 

@@ -1,20 +1,16 @@
 #region Usings
 
+using System.Reflection;
+
+using FluentValidation;
+
+using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using Azure.Identity;
-using Microsoft.Extensions.Logging;
-using FluentValidation;
-using System.Reflection;
-using Microsoft.Extensions.Options;
-
-using Microsoft.Extensions.Configuration.AzureAppConfiguration;
-using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.Extensions.Hosting;
-using System;
-using Microsoft.VisualBasic;
+using Microsoft.Extensions.Logging;
 
 #endregion
 namespace AtlConsultingIo.IntegrationOperations;
@@ -63,7 +59,7 @@ public static partial class AppBuilderExtensions
                 .Build();
         
         new IntegrationServiceConfigurationValidator().ValidateAndThrow( configuration );
-        var integrationStartupOptions = configuration.Value!.OperationsIntegrations;
+        var integrationStartupOptions = configuration.Value!.IntegrationOptions;
         for ( int index = 0; index < integrationStartupOptions.Length; index++ )
         {
             IntegrationOption integration = integrationStartupOptions[ index ];

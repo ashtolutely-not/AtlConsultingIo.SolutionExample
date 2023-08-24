@@ -17,7 +17,7 @@ internal class IntegrationServiceConfigurationValidator : AbstractValidator<Inte
     {
         ClassLevelCascadeMode = CascadeMode.Stop;
         RuleFor( x => x.Value ).NotNull();
-        RuleFor( x => x.Value!.OperationsIntegrations ).Must( x => x.HasItems() ).WithMessage( "Integration configurations required to use operations." );
+        RuleFor( x => x.Value!.IntegrationOptions ).Must( x => x.HasItems() ).WithMessage( "Integration configurations required to use operations." );
         RuleFor( x => x.Value!.ServiceLoggingOptions ).SetValidator( new LogSettingValidator() );
     }
 }

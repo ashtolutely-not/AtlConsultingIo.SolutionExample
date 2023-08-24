@@ -1,7 +1,3 @@
-
-using Polly;
-using System.Net;
-
 namespace AtlConsultingIo.IntegrationOperations;
 
 public sealed record HttpSendState

@@ -1,5 +1,6 @@
-﻿using Newtonsoft.Json.Linq;
-using AtlConsultingIo.IntegrationOperations;
+﻿using AtlConsultingIo.IntegrationOperations;
+
+using Newtonsoft.Json.Linq;
 namespace AtlConsultingIo.Operations.Tests;
 public class OptionValidatorTests
 {
@@ -93,13 +94,13 @@ public class OptionValidatorTests
         var baseKey = 
             new AppConfigurationKey( nameof(IntegrationServiceConfiguration), AppConfigurationKey.WindowsDelimiter )
             .WithPath( nameof(IntegrationServiceConfiguration.Value) )
-            .WithPath( nameof(IntegrationServiceConfiguration.Options.OperationsIntegrations) )
+            .WithPath( nameof(IntegrationServiceConfiguration.Options.IntegrationOptions) )
             .Build();
 
         var validator = new OperationsIntegrationValidator();
-        for ( int i = 0; i < opsConfig.Value!.OperationsIntegrations.Length; i++ )
+        for ( int i = 0; i < opsConfig.Value!.IntegrationOptions.Length; i++ )
         {
-            var _value = opsConfig.Value!.OperationsIntegrations[ i ];
+            var _value = opsConfig.Value!.IntegrationOptions[ i ];
             var _key = new AppConfigurationKey( baseKey.Value, baseKey.Delimiter )
                         .WithPath( i.ToString())
                         .WithPath( nameof(OperationsIntegration.ClientConfiguration) )

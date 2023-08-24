@@ -1,0 +1,21 @@
+{
+  "Value": {
+    "ServiceLoggingOptions": {
+      "StorageLoggingEnabled": true,
+      "DebugLoggingEnabled" :  false,
+      "Value": {
+        "StorageLogConnection": {
+          "Value": ""
+        },
+        "UseBlobStorage": true,
+        "UseDocumentStorage" :  false,
+        "StorageLogResourceName" :  "{BlobContainerName|StorageTableName}"
+      }
+    },
+    "IntegrationOptions": [
+      {},
+      {},
+      {}
+    ]
+  }
+}

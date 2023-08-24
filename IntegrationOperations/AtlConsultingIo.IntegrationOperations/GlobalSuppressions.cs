@@ -5,5 +5,5 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage( "Style" , "IDE0019:Use pattern matching" , Justification = "<Pending>" , Scope = "member" , Target = "~M:AtlConsultingIo.Operations.OperationExtensions.TypedResult``1(System.Object)~``0" )]
-[assembly: SuppressMessage( "Style" , "IDE0019:Use pattern matching" , Justification = "<Pending>" , Scope = "member" , Target = "~M:AtlConsultingIo.Operations.OperationExtensions.InitializeJsonConverter(System.Type)~Newtonsoft.Json.JsonConverter" )]
+[assembly: SuppressMessage ( "Style" , "IDE0019:Use pattern matching" , Justification = "<Pending>" , Scope = "member" , Target = "~M:AtlConsultingIo.Operations.OperationExtensions.TypedResult``1(System.Object)~``0" )]
+[assembly: SuppressMessage ( "Style" , "IDE0019:Use pattern matching" , Justification = "<Pending>" , Scope = "member" , Target = "~M:AtlConsultingIo.Operations.OperationExtensions.InitializeJsonConverter(System.Type)~Newtonsoft.Json.JsonConverter" )]

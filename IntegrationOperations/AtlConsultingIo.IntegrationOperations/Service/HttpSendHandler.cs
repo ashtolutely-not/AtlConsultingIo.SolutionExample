@@ -1,7 +1,3 @@
-using Polly;
-
-using System.Net.Http;
-
 namespace AtlConsultingIo.IntegrationOperations;
 
 public sealed class HttpSendHandler : IHttpSendHandler

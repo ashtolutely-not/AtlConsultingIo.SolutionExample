@@ -1,4 +1,5 @@
 using FluentValidation;
+
 using Microsoft.Extensions.Logging;
 
 namespace AtlConsultingIo.IntegrationOperations;

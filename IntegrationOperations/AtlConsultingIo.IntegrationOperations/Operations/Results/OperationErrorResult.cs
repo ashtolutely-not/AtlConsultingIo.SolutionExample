@@ -1,7 +1,3 @@
-using OneOf.Types;
-
-using System.Net;
-
 namespace AtlConsultingIo.IntegrationOperations;
 
 public readonly record struct OperationError : IIntegrationOperationResult

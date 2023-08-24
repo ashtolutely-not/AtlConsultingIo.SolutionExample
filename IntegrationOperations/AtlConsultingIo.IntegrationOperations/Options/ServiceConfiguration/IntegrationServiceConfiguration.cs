@@ -16,7 +16,7 @@ public sealed record IntegrationServiceConfiguration
 
     public record Options
     {
-        public IntegrationOption[] OperationsIntegrations { get; set; } = Array.Empty<IntegrationOption>();
+        public IntegrationOption[] IntegrationOptions { get; set; } = Array.Empty<IntegrationOption>();
         public IntegrationServiceLogSetting ServiceLoggingOptions { get; set; } = IntegrationServiceLogSetting.Default;
     }
 

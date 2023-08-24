@@ -1,5 +1,3 @@
-
-using Azure.Data.Tables;
 using Azure.Storage.Queues;
 
 using FluentValidation;

@@ -1,8 +1,11 @@
+using System.Data;
+
 using Dapper;
+
 using FluentValidation;
+
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
-using System.Data;
 
 namespace AtlConsultingIo.IntegrationOperations;
 internal class SqlRowUpdateHandler : IIntegrationCommand<UpdateSqlRow>

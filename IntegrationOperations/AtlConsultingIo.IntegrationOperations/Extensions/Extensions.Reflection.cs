@@ -1,9 +1,6 @@
-using FluentValidation;
-
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.VisualBasic;
-
 using System.Reflection;
+
+using FluentValidation;
 
 namespace AtlConsultingIo.IntegrationOperations;
 internal static partial class OperationExtensions

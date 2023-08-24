@@ -1,10 +1,7 @@
 using Azure;
-using Azure.Core;
 
-using Microsoft.ApplicationInsights;
 using Microsoft.Data.SqlClient;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+
 using Polly;
 using Polly.Contrib.WaitAndRetry;
 

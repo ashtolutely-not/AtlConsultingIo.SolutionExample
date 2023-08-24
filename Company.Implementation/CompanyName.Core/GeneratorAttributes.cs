@@ -1,7 +1,7 @@
 
 namespace CompanyName.Core;
 
-    [AttributeUsage( AttributeTargets.Struct, AllowMultiple = false, Inherited = false)]
+[AttributeUsage( AttributeTargets.Struct, AllowMultiple = false, Inherited = false)]
 	public class NewtonsoftConverterAttribute : Attribute
 	{
 

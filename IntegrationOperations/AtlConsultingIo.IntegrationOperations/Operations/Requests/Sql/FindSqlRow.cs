@@ -1,5 +1,3 @@
-using Microsoft.Data.SqlClient;
-
 using System.Data;
 
 namespace AtlConsultingIo.IntegrationOperations;

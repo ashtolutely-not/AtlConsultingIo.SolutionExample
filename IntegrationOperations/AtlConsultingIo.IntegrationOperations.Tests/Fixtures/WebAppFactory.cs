@@ -1,8 +1,9 @@
 ﻿
 
+using AtlConsultingIo.IntegrationOperations;
+
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
-using AtlConsultingIo.IntegrationOperations;
 
 namespace AtlConsultingIo.Operations.Tests;
 
@@ -22,13 +23,13 @@ public class WebAppFactory : WebApplicationFactory<TestConsole.Program>
         if( opsConfig?.Value is null )
             return;
 
-        var integrations = opsConfig.Value.OperationsIntegrations;
+        var integrations = opsConfig.Value.IntegrationOptions;
         builder.ConfigureServices( services =>
         {
             var keyBuilder =
                 new AppConfigurationKey( nameof(IntegrationServiceConfiguration) , AppConfigurationKey.WindowsDelimiter )
                 .WithPath( nameof( IntegrationServiceConfiguration.Value ) )
-                .WithPath( nameof( IntegrationServiceConfiguration.Options.OperationsIntegrations ));
+                .WithPath( nameof( IntegrationServiceConfiguration.Options.IntegrationOptions ));
 
             for ( int i = 0; i < integrations.Length; i++ )
             {

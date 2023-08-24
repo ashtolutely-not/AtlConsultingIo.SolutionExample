@@ -1,10 +1,11 @@
 ﻿
 
+using AtlConsultingIo.IntegrationOperations;
+using AtlConsultingIo.IntegrationOperations.TestConsole;
+
 using Azure.Data.Tables;
 using Azure.Storage.Blobs;
 using Azure.Storage.Queues;
-using AtlConsultingIo.IntegrationOperations;
-using AtlConsultingIo.IntegrationOperations.TestConsole;
 
 namespace AtlConsultingIo.Operations.Tests;
 public class StorageClientFactoryTests

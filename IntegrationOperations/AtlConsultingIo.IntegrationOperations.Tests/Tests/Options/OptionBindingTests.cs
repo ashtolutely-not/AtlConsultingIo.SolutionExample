@@ -1,6 +1,7 @@
 ﻿
-using Newtonsoft.Json.Linq;
 using AtlConsultingIo.IntegrationOperations;
+
+using Newtonsoft.Json.Linq;
 namespace AtlConsultingIo.Operations.Tests;
 public class OptionBindingTests
 {
@@ -55,7 +56,7 @@ public class OptionBindingTests
     public void Can_Bind_To_Integrations_Array()
     {
         var configuration = SetupHelper.GetConfigurationsInstanceFromValidSettingsFile();
-        var integrations = configuration.Value?.OperationsIntegrations;
+        var integrations = configuration.Value?.IntegrationOptions;
 
         integrations.ShouldNotBeNull();
     }
@@ -67,14 +68,14 @@ public class OptionBindingTests
 
         var keyBuilder = new AppConfigurationKey( nameof( IntegrationServiceConfiguration) , AppConfigurationKey.WindowsDelimiter )
             .WithPath( nameof( IntegrationServiceConfiguration.Value ) )
-            .WithPath( nameof( IntegrationServiceConfiguration.Options.OperationsIntegrations ))
+            .WithPath( nameof( IntegrationServiceConfiguration.Options.IntegrationOptions ))
             .WithPath( "0" )
             .Build();
 
         string expectedKey = string.Join(':', 
             nameof(IntegrationServiceConfiguration), 
             nameof(IntegrationServiceConfiguration.Value), 
-            nameof( IntegrationServiceConfiguration.Options.OperationsIntegrations ),
+            nameof( IntegrationServiceConfiguration.Options.IntegrationOptions ),
             "0");
 
         string key = keyBuilder.Value;
@@ -93,7 +94,7 @@ public class OptionBindingTests
         AppConfigurationKey keyBuilder = 
             new AppConfigurationKey(nameof(IntegrationServiceConfiguration), AppConfigurationKey.WindowsDelimiter)
             .WithPath( nameof( IntegrationServiceConfiguration.Value ) )
-            .WithPath( nameof( IntegrationServiceConfiguration.Options.OperationsIntegrations ))
+            .WithPath( nameof( IntegrationServiceConfiguration.Options.IntegrationOptions ))
             .WithPath("0")
             .WithPath( nameof(OperationsIntegration.ClientConfiguration));
 
@@ -111,7 +112,7 @@ public class OptionBindingTests
         AppConfigurationKey keyBuilder = 
             new AppConfigurationKey( nameof(IntegrationServiceConfiguration) , AppConfigurationKey.WindowsDelimiter )
             .WithPath( nameof( IntegrationServiceConfiguration.Value ) )
-            .WithPath( nameof( IntegrationServiceConfiguration.Options.OperationsIntegrations ))
+            .WithPath( nameof( IntegrationServiceConfiguration.Options.IntegrationOptions ))
             .WithPath("0")
             .WithPath( nameof(OperationsIntegration.ClientConfiguration));
 
@@ -193,7 +194,7 @@ public class OptionBindingTests
         IntegrationServiceConfiguration configuration = SetupHelper.GetConfigurationsInstanceFromValidSettingsFile();
         configuration.Value.ShouldNotBeNull();
 
-        OperationsIntegration intConfig = configuration.Value.OperationsIntegrations.First();
+        OperationsIntegration intConfig = configuration.Value.IntegrationOptions.First();
         intConfig.Type.ShouldNotBe(IntegrationType.Unknown);
     }
 
@@ -203,7 +204,7 @@ public class OptionBindingTests
         IntegrationServiceConfiguration configuration = SetupHelper.GetConfigurationsInstanceFromValidSettingsFile();
         configuration.Value.ShouldNotBeNull();
 
-        OperationsIntegration intConfig = configuration.Value.OperationsIntegrations.First();
+        OperationsIntegration intConfig = configuration.Value.IntegrationOptions.First();
         intConfig.RetryOption.Value.ShouldNotBeNull();
         intConfig.RetryOption.Value.RetryDelayStrategy.ShouldBe(RetryDelayStrategy.Constant);
 

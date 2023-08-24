@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection.Extensions;
-using AtlConsultingIo.IntegrationOperations;
+﻿using AtlConsultingIo.IntegrationOperations;
 
 namespace AtlConsultingIo.Operations.Tests;
 internal static class SetupHelper
@@ -50,14 +49,14 @@ internal static class SetupHelper
         var keyBuilder =
             new AppConfigurationKey( nameof(IntegrationServiceConfiguration) , AppConfigurationKey.WindowsDelimiter )
             .WithPath( nameof( IntegrationServiceConfiguration.Value ) )
-            .WithPath( nameof( IntegrationServiceConfiguration.Options.OperationsIntegrations ));
+            .WithPath( nameof( IntegrationServiceConfiguration.Options.IntegrationOptions ));
 
         var services = new ServiceCollection();
         var opsConfig = configuration.GetSection( nameof( IntegrationServiceConfiguration ) ).Get<IntegrationServiceConfiguration>();
         if( opsConfig?.Value is null )
             return services.BuildServiceProvider();
 
-        var integrations = opsConfig.Value.OperationsIntegrations;
+        var integrations = opsConfig.Value.IntegrationOptions;
         if ( integrations is not null )
             for ( int i = 0; i < integrations.Length; i++ )
             {
