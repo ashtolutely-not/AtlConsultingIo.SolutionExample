@@ -55,5 +55,5 @@ internal record GetOrAddCartProcessingLock : ICheckoutOperation<GetOrAddCartProc
     }
     DistributedCacheEntryOptions EntryOptions 
         => new DistributedCacheEntryOptions{ AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds( _options.CartProcessingLockTimeToLiveInSeconds ) };
-    string CacheKey => _request.CartId.GetHashCode().ToString();
+    string CacheKey => $"CartProcessingLock_{ _request.CartId }";
 }
